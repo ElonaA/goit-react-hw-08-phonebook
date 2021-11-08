@@ -13,7 +13,7 @@ import {
 
 import toast from 'react-hot-toast';
 
-axios.defaults.baseURL = 'https://6184154091d76c00172d1d69.mockapi.io/api/v1/';
+
 
 //Асинхронно получаем список контактов
 export const fetchContacts = () => async dispatch => {

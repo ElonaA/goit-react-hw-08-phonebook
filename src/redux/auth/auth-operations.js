@@ -27,7 +27,7 @@ const register = credentials => async dispatch => {
     dispatch(authActions.registerSuccess(data));
   } catch (error) {
     dispatch(authActions.registerError(error.message));
-    toast.error('Oops, this user already create. Try log in.');
+    toast.error(error.message);
   }
 };
 
@@ -42,7 +42,7 @@ const logIn = credentials => async dispatch => {
     dispatch(authActions.loginSuccess(data));
   } catch (error) {
     dispatch(authActions.loginError(error.message));
-    toast.error('Ops, user not find. Try register');
+    toast.error(error.message);
   }
 };
 
